@@ -1,6 +1,31 @@
 export class Fecha {
-    constructor(fecha){
-        this.fecha = new Date;
+    constructor(dia, mes, año){
+        this.fecha= new Date;
+        this.diaSemana = 
+        [
+            "Domingo",
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes",
+            "Sabado"
+        ];
+        this.meses= 
+        [
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"
+        ];
     }
 
     getAños() {
@@ -8,18 +33,36 @@ export class Fecha {
     }
 
     getMeses() {
-        return `${this.fecha.getMonth() + 1}`;
+        let mes = this.meses[this.fecha.getMonth()];
+
+        return mes;
     }
 
     getSemanas() {
-        return `${this.fecha.getMonth() + 1}`;
+        var difMseg = Date.now()-this.fecha;
+        var mSegSemana= 1000* 60*60*24*7;
+        var semanas= Math.trunc(difMseg/mSegSemana);
+        return semanas;
+    }
+
+    getDias() {
+
+    }
+
+    getFecha() {
+
+    }
+
+    getDiaFecha() {
+
     }
 }
-let app = new Fecha();
+
 
 let fecha1 = new Fecha
 
-app.getAños();
+
 
 console.log(fecha1.getAños());
 console.log(fecha1.getMeses());
+console.log(fecha1.getSemanas());
