@@ -28,6 +28,8 @@ export class Fecha {
         ];
     }
 
+    formatearMsecs = (dividendo) => Math.trunc((Date.now() - this.fecha) / dividendo);
+
     getAños() {
         return `${this.fecha.getFullYear()}`;
     }
@@ -39,22 +41,20 @@ export class Fecha {
     }
 
     getSemanas() {
-        var difMseg = Date.now()-this.fecha;
-        var mSegSemana= 1000* 60*60*24*7;
-        var semanas= Math.trunc(difMseg/mSegSemana);
-        return semanas;
+        
     }
 
     getDias() {
-
+        return `${this.fecha.getDate()}`;
     }
 
     getFecha() {
-
+        return `${this.fecha.getDate()}`+"/"+`${this.fecha.getMonth()+1}`+"/"+`${this.fecha.getFullYear()}`;
     }
 
     getDiaFecha() {
-
+        let diaSemana = this.diaSemana[this.fecha.getDay()]
+        return diaSemana;
     }
 }
 
@@ -65,4 +65,7 @@ let fecha1 = new Fecha
 
 console.log(fecha1.getAños());
 console.log(fecha1.getMeses());
+console.log(fecha1.getFecha());
+console.log(fecha1.getDiaFecha());  
+console.log(fecha1.getDias());   
 console.log(fecha1.getSemanas());
