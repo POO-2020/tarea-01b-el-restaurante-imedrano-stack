@@ -5,11 +5,15 @@ export default class Precio {
      * 
      */
     constructor(valor){
-        this.precio = precio;
+        this.valor = valor;
     }
 
     getPrecio() {
-        return this.precio.getPrecio();
+        return `$${this.valor}`;   
     }
-
 }
+/*
+let precio1 = new Precio (500)
+
+console.log(precio1.getPrecio());
+*/
