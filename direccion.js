@@ -43,5 +43,7 @@ let direccion1 = new Direccion
     "Villa de Alvarez"
 );
 
+/*
 console.log(direccion1.getFormatoCorto());
 console.log(direccion1.getFormatoExtendido());
+*/
