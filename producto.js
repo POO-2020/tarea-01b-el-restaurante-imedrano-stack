@@ -19,4 +19,6 @@ export default class Producto {
 
 let producto1 = new Producto("Papas Fritas", new Precio ((200)));
 
+/*
 console.log(producto1.getDescripcion());
+*/
