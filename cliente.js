@@ -27,4 +27,6 @@ let cliente1 = new Cliente
     3130658
 );
 
+/*
 console.log(cliente1.getPerfil());
+*/

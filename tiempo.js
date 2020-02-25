@@ -29,6 +29,7 @@ export default class Tiempo {
 let fecha1 = new Tiempo
 
 
-
+/*
 console.log(fecha1.getFormato12());
 console.log(fecha1.getFormato24());
+*/

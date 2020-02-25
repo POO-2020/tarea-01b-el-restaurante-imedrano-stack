@@ -1,4 +1,4 @@
-export class Fecha {
+export default class Fecha {
     constructor(dia, mes, año){
         this.fecha= new Date;
         this.diaSemana = 
@@ -41,7 +41,9 @@ export class Fecha {
     }
 
     getSemanas() {
-        
+        let fechaActual = new Date(Date.now());
+        let añosTranscurridos = fechaActual.getFullYear() - this.fecha.getFullYear();
+        return `${añosTranscurridos * 52} semanas.`;
     }
 
     getDias() {
@@ -62,10 +64,11 @@ export class Fecha {
 let fecha1 = new Fecha
 
 
-
+/*
 console.log(fecha1.getAños());
 console.log(fecha1.getMeses());
 console.log(fecha1.getFecha());
 console.log(fecha1.getDiaFecha());  
 console.log(fecha1.getDias());   
 console.log(fecha1.getSemanas());
+*/
